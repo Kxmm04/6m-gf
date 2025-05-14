@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,14 @@
   <link rel="stylesheet" href="style2.css">
   <script src="apssword.js" defer></script>
 </head>
+
 <body>
   <form id="checkForm" action="first.html" method="get">
     <div class="form-group">
-      <input type="tel" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" 
-  required oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" 
-  oninput="this.setCustomValidity('')" maxlength="2" minlength="1" pattern="[0-9]*">
+      <label for="apassword">วันครบรอบวันไหนน้าาา</label>
+      <input type="tel" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" required
+        oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" oninput="this.setCustomValidity('')" maxlength="2"
+        minlength="1" pattern="[0-9]*">
 
     </div>
     <div class="form-group">
@@ -31,4 +34,5 @@
     </div>
   </div>
 </body>
+
 </html>
