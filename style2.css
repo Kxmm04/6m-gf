@@ -1,0 +1,136 @@
+/* กำหนดฟอนต์ให้กับทั้ง html, body และส่วนที่ต้องการใช้งาน */
+html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  font-family: 'Itim', cursive;
+}
+
+/* ตัวอย่างการปรับสไตล์ของฟอร์ม */
+#checkForm {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  font-family: 'Itim', cursive;
+}
+
+
+/* ปรับสไตล์ให้กับแต่ละกลุ่มของฟอร์ม */
+.form-group {
+  margin-bottom: 25px;         /* เพิ่มระยะห่างระหว่างกลุ่ม */
+}
+
+/* ขยายขนาดข้อความ label */
+#checkForm label {
+  display: block;
+  font-size: 1.5em;            /* ขยายขนาดฟอนต์ */
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Itim', cursive;
+}
+
+/* ปรับสไตล์สำหรับ input ที่เป็นข้อความให้ใหญ่ขึ้น */
+#checkForm input[type="text"] {
+  width: 100%;
+  padding: 12px;               /* เพิ่ม padding ให้ใหญ่ขึ้น */
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+  font-size: 1.3em;            /* ขยายขนาดฟอนต์ใน input */
+  outline: none;
+  font-family: 'Itim', cursive;
+}
+
+/* ปรับสไตล์สำหรับปุ่ม submit ให้โดดเด่นและใหญ่ขึ้น */
+#checkForm input[type="submit"] {
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 14px 28px;          /* เพิ่ม padding ให้ปุ่มใหญ่ขึ้น */
+  font-size: 1.3em;            /* ขยายฟอนต์ปุ่ม */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Itim', cursive;
+}
+
+#checkForm input[type="submit"]:hover {
+  background-color: #ff8da1;
+  font-family: 'Itim', cursive;
+}
+
+  /* ----------------- สไตล์สำหรับ Modal ----------------- */
+  
+  /* พื้นหลังของ Modal ซ่อนไว้เริ่มต้น */
+  .modal {
+    display: none; /* ซ่อน Modal เริ่มแรก */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* ใช้ Flexbox เพื่อจัดให้อยู่ตรงกลาง */
+    justify-content: center;
+    align-items: center;
+    /* เพิ่ม animation แบบ fade-in */
+    animation: fadeIn 0.4s;
+    font-family: 'Itim', cursive;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* เนื้อหาของ Modal */
+  .modal-content {
+    background: linear-gradient(135deg, #fff, #ffeef0);
+    padding: 30px 25px;
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* ข้อความใน Modal ให้อยู่ตรงกลางและดูน่ารัก */
+  .modal-message {
+    margin: 20px 0;
+    font-size: 1.3em;
+    color: #d6336c;
+    text-align: center;
+  }
+  
+  /* ปรับให้ emoji มีขนาดเล็กและดูกลมกลืนกับข้อความ */
+  .emoji {
+    font-size: 1.3em;
+  }
+  
+  /* ปุ่มปิด Modal */
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #ffb6c1;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff8da1;
+    text-decoration: none;
+  }
+  

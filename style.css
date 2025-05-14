@@ -1,0 +1,70 @@
+/* พื้นฐานสำหรับ body และ h1 */
+body {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    font-family: 'Itim', cursive;  /* เปลี่ยนเป็นฟอนต์น่ารักตามต้องการ */
+    text-align: center;
+
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Container สำหรับ Slider */
+  .slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Container สำหรับ slides (กำหนดความสูงคงที่สำหรับความสม่ำเสมอ) */
+  .slides {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Slide แต่ละอันถูกจัดให้อยู่ในตำแหน่ง absolute */
+  .slide {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    width: 75%;
+    /* เริ่มต้นซ่อน slide ด้วย opacity 0 และหมุนเล็กน้อย */
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+    /* ซ่อน slide ที่ไม่ได้แสดง */
+    display: none;
+  }
+  
+  /* Slide ที่ active: รูปจะอยู่ตรงกลาง ไม่หมุน และแสดงด้วย opacity 1 */
+  .slide.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 10;
+  }
+  
+  /* Slide ถัดไปที่ต้องการให้ซ้อนอยู่ด้านหลัง: แสดงออกมาเล็กน้อย */
+  .slide.next {
+    display: block;
+    opacity: 0.6;
+    transform: translate(-55%, -55%) rotate(10deg);
+    z-index: 5;
+  }
+  
+  /* รูปภาพในแต่ละ slide: ปรับให้พอดีกรอบด้วย object-fit และตกแต่งในสไตล์ Polaroid */
+  .slide img.image {
+    display: block;
+    width:50%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid #fff;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
