@@ -12,9 +12,10 @@
 <body>
   <form id="checkForm" action="first.html" method="get">
     <div class="form-group">
-      <label for="apassword">วันครบรอบวันไหนน้าาา</label>
-      <input type="text" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" required
-        oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" oninput="this.setCustomValidity('')" maxlength="2" minlength="1">
+      <input type="tel" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" 
+  required oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" 
+  oninput="this.setCustomValidity('')" maxlength="2" minlength="1" pattern="[0-9]*">
+
     </div>
     <div class="form-group">
       <input type="submit" value="กดเยยย">
