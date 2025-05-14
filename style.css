@@ -1,11 +1,18 @@
-/* พื้นฐานสำหรับ body และ h1 */
-body {
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    font-family: 'Itim', cursive;  /* เปลี่ยนเป็นฟอนต์น่ารักตามต้องการ */
-    text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
 
-    padding: 20px;
-  }
+body {
+  font-family: 'Itim', cursive;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
   
   h1 {
     margin-bottom: 20px;
