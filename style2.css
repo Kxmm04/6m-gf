@@ -1,4 +1,4 @@
-/* กำหนดฟอนต์ให้กับทั้ง html, body และส่วนที่ต้องการใช้งาน */
+
 html, body {
   margin: 0;
   height: 100%;
@@ -133,4 +133,30 @@ html, body {
     color: #ff8da1;
     text-decoration: none;
   }
-  
+  @media (max-width: 600px) {
+  #checkForm {
+    padding: 20px;
+  }
+
+  #checkForm label {
+    font-size: 1.2em;
+  }
+
+  #checkForm input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1.1em;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-message {
+    font-size: 1.1em;
+  }
+
+  .close {
+    font-size: 22px;
+  }
+}

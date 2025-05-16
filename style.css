@@ -1,4 +1,3 @@
-/* ฟอนต์และพื้นหลัง */
 body {
   background: linear-gradient(135deg, #ffdde1, #ee9ca7);
   font-family: 'Itim', cursive;
@@ -6,94 +5,78 @@ body {
   padding: 20px;
   margin: 0;
   box-sizing: border-box;
-  height: 100vh;
-  overflow-x: hidden;
 }
 
-/* ฟอร์มกรอก */
-.form-group {
-  margin: 20px auto;
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Slider Container */
+.slider {
+  position: relative;
   width: 90%;
-  max-width: 400px;
-}
-
-/* input field และปุ่ม */
-input[type="tel"],
-input[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  border: none;
-  margin-top: 10px;
-  box-sizing: border-box;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-}
-
-img.image {
-  width: 80%;
-  max-width: 300px;
-  height: auto;
-  display: block;
+  max-width: 600px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-.modal-message {
-  font-size: 1.5em;
-  color: #d9534f;
-  margin-top: 10px;
+/* Slide Container */
+.slides {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* อัตราส่วน 4:3 ประมาณ 75% */
 }
 
-/* ปุ่มปิด modal */
-.close {
+/* Slide */
+.slide {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+  display: none;
 }
 
-/* Responsive สำหรับมือถือ */
-@media screen and (max-width: 600px) {
-  body {
-    padding: 10px;
+.slide.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 10;
+}
+
+.slide.next {
+  display: block;
+  opacity: 0.6;
+  transform: translate(-55%, -55%) rotate(10deg);
+  z-index: 5;
+}
+
+/* ✅ รูปแบบโพลารอยด์ */
+.slide img.image {
+  display: block;
+  width: 45%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 10px solid #fff;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
   }
 
-  .form-group {
-    width: 100%;
+  .slide img.image {
+    width: 90%;
+    max-width: 250px;
   }
 
-  input[type="tel"],
-  input[type="submit"] {
-    font-size: 1em;
-    padding: 12px;
-  }
-
-  .modal-content {
-    width: 95%;
-    margin-top: 30%;
+  .slides {
+    padding-top: 80%;
   }
 }
